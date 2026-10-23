@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar senha | NovaConta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="page">
+        <section class="visual-panel" aria-label="Apresentação">
+            <a class="brand" href="#" aria-label="NovaConta página inicial">
+                <span class="brand-icon">N</span>
+                <span>nova<span class="brand-light">conta</span></span>
+            </a>
+
+            <div class="visual-content">
+                <div class="eyebrow"><span class="status-dot"></span> SUA CONTA COM SEGURANÇA</div>
+                <h1>De volta ao que <span>importa.</span></h1>
+                <div class="security-card">
+                    <div class="shield-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 3 19 6v5c0 4.5-2.9 7.7-7 10-4.1-2.3-7-5.5-7-10V6l7-3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                            <path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span>Um processo seguro do início ao fim</span>
+                    </div>
+                    <span class="check-mark" aria-hidden="true">✓</span>
+                </div>
+            </div>
+
+            <div class="panel-footer">
+            </div>
+            <div class="decor decor-one"></div>
+            <div class="decor decor-two"></div>
+        </section>
+
+        <section class="form-panel">
+            <div class="form-wrap">
+                <a class="back-link" href="login.html">
+                    <span aria-hidden="true"></span> Voltar para o login
+                </a>
+
+                <div class="mobile-brand">
+                    <span class="brand-icon">N</span>
+                    <span>nova<span class="brand-light">conta</span></span>
+                </div>
+
+                <div class="mail-illustration" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none">
+                        <rect x="9" y="16" width="46" height="33" rx="7" fill="#E8EFFF" stroke="#C7D5FF" stroke-width="1.5"/>
+                        <path d="m12 21 20 15 20-15" stroke="#4769E8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="48" cy="16" r="9" fill="#4667E8" stroke="#fff" stroke-width="3"/>
+                        <path d="m44.5 16 2.3 2.3 4.2-4.6" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <span class="step-label"></span>
+                <h2>Esqueceu sua senha?</h2>
+                <p class="intro">Digite o e-mail cadastrado e enviaremos as instruções para criar uma nova senha.</p>
+
+                <form action="#" method="post" id="recovery-form">
+                    <label for="email">Seu e-mail</label>
+                    <div class="input-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <rect x="3.5" y="5" width="17" height="14" rx="3" stroke="currentColor" stroke-width="1.6"/>
+                            <path d="m5 7 7 5.5L19 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="email" id="email" name="email" placeholder="voce@exemplo.com" autocomplete="email" required>
+                    </div>
+                    <button type="submit">Enviar link de recuperação <span aria-hidden="true">→</span></button>
+                    <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+                </form>
+
+
+                <p class="bottom-note">Lembrou sua senha? <a href="login.html">Fazer login</a></p>
+            </div>
+        </section>
+    </main>
+    <script>
+        const form = document.getElementById("recovery-form");
+        const message = document.getElementById("form-message");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const email = document.getElementById("email").value.trim();
+
+            if (!email) {
+                message.textContent = "Digite seu e-mail para continuar.";
+                message.className = "form-message error";
+                return;
+                }
+        });
+    </script>
+</body>
+</html>

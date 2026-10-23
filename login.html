@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar | NovaConta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="page">
+        <section class="visual-panel">
+            <a class="brand" href="login.html"><span class="brand-icon">N</span><span>nova<span class="brand-light">conta</span></span></a>
+            <div class="visual-content">
+                <div class="eyebrow"><span class="status-dot"></span> SUA CONTA, COM SEGURANÇA</div>
+
+                <p>Acesse sua conta e continue de onde parou. Seus dados ficam protegidos com a gente.</p>
+                <div class="security-card">
+                    <div class="shield-icon" aria-hidden="true">✓</div>
+                    <div><span>Entre usando suas credenciais cadastradas.</span></div>
+                    <span class="check-mark" aria-hidden="true">✓</span>
+                </div>
+            </div>
+            <div class="panel-footer"></div>
+            <div class="decor decor-one"></div><div class="decor decor-two"></div>
+        </section>
+        <section class="form-panel">
+            <div class="form-wrap">
+                <div class="mobile-brand"><span class="brand-icon">N</span><span>nova<span class="brand-light">conta</span></span></div>
+                <div class="mail-illustration" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" fill="none"><rect x="12" y="28" width="40" height="28" rx="6" fill="#E8EFFF" stroke="#C7D5FF" stroke-width="1.5"/><path d="M21 28v-7a11 11 0 0 1 22 0v7" stroke="#4769E8" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="40" r="3" fill="#4769E8"/><path d="M32 43v5" stroke="#4769E8" stroke-width="2" stroke-linecap="round"/></svg>
+                </div>
+                <span class="step-label">BEM-VINDO DE VOLTA</span>
+                <h2>Entre na sua conta</h2>
+                <p class="intro">Informe seus dados para acessar sua área pessoal.</p>
+                <form id="login-form">
+                    <label for="email">Seu e-mail</label>
+                    <div class="input-wrap"><input type="email" id="email" placeholder="voce@exemplo.com" autocomplete="email" required></div>
+                    <label for="password" style="margin-top:18px">Senha</label>
+                    <div class="input-wrap"><input type="password" id="password" placeholder="Digite sua senha" autocomplete="current-password" required></div>
+                    <div style="display:flex;justify-content:flex-end;margin-top:12px;font-size:12px">
+                        <a href="index-1.html" style="color:#4667e8;font-weight:700">Esqueci a senha</a>
+                    </div>
+                    <button type="submit">Entrar <span aria-hidden="true">→</span></button>
+                    <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const message = document.getElementById("form-message");
+        });
+    </script>
+</body>
+</html>
